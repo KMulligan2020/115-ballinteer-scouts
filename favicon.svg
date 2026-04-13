@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Three vertical bars filling the whole icon -->
+  <rect x="0"  y="0" width="11" height="32" fill="#e53e28"/>
+  <rect x="11" y="0" width="10" height="32" fill="#f5bd41"/>
+  <rect x="21" y="0" width="11" height="32" fill="#1d63b0"/>
+</svg>

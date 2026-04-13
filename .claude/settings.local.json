@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.scouts.ie)",
+      "WebFetch(domain:1stkilkennyscouts.ie)",
+      "WebFetch(domain:www.32limerickscouts.com)",
+      "WebFetch(domain:dsfscouts.ie)",
+      "WebFetch(domain:www.73rahenyscouts.ie)",
+      "WebSearch",
+      "WebFetch(domain:www.caherdavinscouts.ie)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:thescoutshop.ie)",
+      "WebFetch(domain:sb.myweb.ie)",
+      "WebFetch(domain:scouting360.ie)",
+      "WebFetch(domain:www.irishmedals.ie)",
+      "WebFetch(domain:issuu.com)",
+      "WebFetch(domain:www.irelandscouts.ie)",
+      "Bash(brew install:*)",
+      "WebFetch(domain:galwayscoutcounty.ie)"
+    ]
+  }
+}
