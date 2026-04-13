@@ -1254,29 +1254,25 @@ body {
   transform: translateY(-2px);
 }
 
-/* Scout stripe accent on left edge of every hub card label */
+/* Emoji icon at top of hub cards */
 .hub-card-code {
   display: block;
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--brand-dark-blue);
-  letter-spacing: 0.05em;
-  padding-left: 0.65rem;
-  border-left: 3px solid var(--scout-blue);
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 0.6rem;
 }
 
 .hub-card-title {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
-  margin: 0.35rem 0 0;
+  margin: 0;
 }
 
 .hub-card-when {
   font-size: 0.8125rem;
   color: var(--text-muted);
-  margin: 0.5rem 0 0;
+  margin: 0.35rem 0 0;
 }
 
 .hub-card--join {
@@ -1285,8 +1281,7 @@ body {
 }
 
 .hub-card--join .hub-card-code {
-  color: var(--brand-orange);
-  border-left-color: var(--brand-orange);
+  /* emoji inherits naturally, no overrides needed */
 }
 
 .home-hub .section-hub-grid {
