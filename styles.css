@@ -1108,11 +1108,23 @@ body {
 }
 
 /* Gallery grid — masonry via CSS columns */
+.gallery-section {
+  padding: 0;
+}
+
+.gallery-section .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.gallery-section .section-intro {
+  padding: 1rem 1.25rem 0;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2px;
-  margin-top: 0.25rem;
 }
 
 @media (min-width: 640px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
