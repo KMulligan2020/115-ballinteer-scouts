@@ -1111,7 +1111,7 @@ body {
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  gap: 2px;
   margin-top: 0.25rem;
 }
 
