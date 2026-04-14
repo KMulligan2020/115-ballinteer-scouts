@@ -374,7 +374,7 @@ body {
 }
 
 .section-content {
-  max-width: 60ch;
+  max-width: 100%;
 }
 
 .section-content p,
@@ -612,7 +612,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  max-width: 52rem;
 }
 
 .history-timeline::before {
@@ -683,6 +682,145 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text);
+}
+
+/* History archive grid (aerial photo, documents, newspaper cuttings) */
+.history-archive {
+  margin: 2.5rem 0;
+}
+
+.history-archive-title {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.85rem;
+}
+
+.history-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 560px) {
+  .history-archive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.history-archive-item {
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--brand-light-gray);
+}
+
+.history-archive-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+.history-archive-item figcaption {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0.6rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* 50th Anniversary section */
+.history-anniversary {
+  margin-top: 2.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(1, 76, 97, 0.06) 0%, rgba(13, 44, 60, 0.04) 100%);
+  border: 1px solid rgba(1, 76, 97, 0.2);
+  border-radius: 12px;
+}
+
+.history-anniversary-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.history-anniversary-badge {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.history-anniversary-title {
+  font-family: var(--font-head);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--brand-teal);
+  margin: 0 0 0.2rem;
+}
+
+.history-anniversary-date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.history-anniversary-body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.history-anniversary-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 560px) {
+  .history-anniversary-photos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .history-anniversary-photos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.history-anniversary-photos figure {
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--brand-light-gray);
+}
+
+.history-anniversary-photos img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+.history-anniversary-photos figcaption {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  padding: 0.35rem 0.5rem;
+  font-style: italic;
+  line-height: 1.35;
 }
 
 /* Section cards (Beavers, Cubs, etc.) – two columns so text isn’t squashed */
