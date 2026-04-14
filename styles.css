@@ -371,7 +371,6 @@ body {
 .section-intro {
   margin: 0 0 1.5rem;
   color: var(--text-muted);
-  max-width: 55ch;
 }
 
 .section-content {
