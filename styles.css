@@ -303,7 +303,7 @@ body {
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
-    min-width: 190px;
+    min-width: 270px;
     background: linear-gradient(160deg, #013a4e 0%, #003830 100%);
     border-radius: 0 var(--radius) var(--radius) var(--radius);
     padding: 0.5rem 0;
@@ -318,6 +318,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     margin-bottom: 0.25rem;
     transition: background 0.12s, color 0.12s;
