@@ -276,10 +276,30 @@ body {
   font-weight: 700;
 }
 
+/* Hidden by default — both media queries control when it shows */
+.nav-dropdown-menu {
+  display: none;
+}
+
+.nav-dropdown-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.nav-dropdown-overview {
+  display: block;
+  text-decoration: none;
+}
+
 /* Desktop dropdown */
 @media (min-width: 860px) {
-  .nav-dropdown-menu {
-    display: none;
+  .nav-dropdown:hover .nav-dropdown-menu,
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: block;
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
@@ -291,18 +311,11 @@ body {
     z-index: 200;
   }
 
-  .nav-dropdown:hover .nav-dropdown-menu,
-  .nav-dropdown.is-open .nav-dropdown-menu {
-    display: block;
-  }
-
   .nav-dropdown-overview {
-    display: block;
     padding: 0.4rem 1rem;
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.75rem;
     font-weight: 600;
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
@@ -325,13 +338,7 @@ body {
   }
 
   .nav-dropdown-label {
-    display: block;
     padding: 0.2rem 1rem 0.1rem;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
   }
 
   .nav-dropdown-menu a {
@@ -356,33 +363,21 @@ body {
     justify-content: space-between;
   }
 
-  .nav-dropdown-menu {
-    display: none;
+  .nav-dropdown.is-open .nav-dropdown-menu {
+    display: block;
     padding: 0.1rem 0 0.4rem 0.75rem;
   }
 
-  .nav-dropdown.is-open .nav-dropdown-menu {
-    display: block;
-  }
-
   .nav-dropdown-overview {
-    display: block;
     padding: 0.35rem 0;
     color: rgba(255, 255, 255, 0.65);
     font-size: 0.82rem;
-    text-decoration: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 0.2rem;
   }
 
   .nav-dropdown-label {
-    display: block;
     padding: 0.4rem 0 0.1rem;
-    color: rgba(255, 255, 255, 0.45);
-    font-size: 0.68rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
   }
 
   .nav-dropdown-group {
