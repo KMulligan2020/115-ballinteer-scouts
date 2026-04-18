@@ -1134,6 +1134,21 @@ body {
   color: var(--brand-dark-green);
 }
 
+/* Hide School year (col 3) and Night code (col 4) on mobile */
+@media (max-width: 640px) {
+  .times-table th:nth-child(3),
+  .times-table td:nth-child(3),
+  .times-table th:nth-child(4),
+  .times-table td:nth-child(4) {
+    display: none;
+  }
+  .times-table th,
+  .times-table td {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.875rem;
+  }
+}
+
 /* Gallery grid — masonry via CSS columns */
 .gallery-section {
   padding: 0;
