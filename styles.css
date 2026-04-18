@@ -1463,3 +1463,9 @@ body {
   object-position: center;
   transform: scale(1.15);
 }
+
+@media (max-width: 640px) {
+  .hero-video {
+    display: none;
+  }
+}
