@@ -1134,12 +1134,10 @@ body {
   color: var(--brand-dark-green);
 }
 
-/* Hide School year (col 3) and Night code (col 4) on mobile */
+/* Hide School year (col 3) on mobile — leaves Section, Ages, Night, Time */
 @media (max-width: 640px) {
   .times-table th:nth-child(3),
-  .times-table td:nth-child(3),
-  .times-table th:nth-child(4),
-  .times-table td:nth-child(4) {
+  .times-table td:nth-child(3) {
     display: none;
   }
   .times-table th,
