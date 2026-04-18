@@ -42,7 +42,14 @@
       "Bash(mdls -name kMDItemDurationSeconds -name kMDItemPixelWidth -name kMDItemPixelHeight /Users/karen/Downloads/VIDEO-2025-05-19-09-01-32.mp4)",
       "Bash(git pull:*)",
       "Bash(git stash:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(sips -z 630 1200 \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/og-image-camp.png\" --out \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/og-image-camp.png\")",
+      "Bash(sips -s format jpeg -s formatOptions 85 \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/og-image-camp.png\" --out \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/og-image-camp.jpg\")",
+      "WebFetch(domain:fonts.googleapis.com)",
+      "Bash(curl:*)",
+      "Bash(mv IMG-5070.JPG IMG-5070.jpg)",
+      "Bash(mv IMG-5083.JPG IMG-5083.jpg)",
+      "Bash(git mv:*)"
     ]
   }
 }

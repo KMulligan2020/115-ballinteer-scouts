@@ -1,11 +1,55 @@
-// Mobile menu + active nav for 115th Ballinteer site
+// Mobile menu + sections dropdown for 115th Ballinteer site
 (function () {
   var BREAKPOINT = 860; // must match the CSS @media breakpoint
   var toggle = document.querySelector('.menu-toggle');
   var nav = document.querySelector('.nav');
+  var dropdown = document.querySelector('.nav-dropdown');
+  var dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  var dropdownMenu = document.querySelector('.nav-dropdown-menu');
   if (!toggle || !nav) return;
 
-  /* ── Open / close helpers ── */
+  /* ── Dropdown (sections) ── */
+  function openDropdown() {
+    if (!dropdown) return;
+    dropdown.classList.add('is-open');
+    if (dropdownToggle) dropdownToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    if (!dropdown) return;
+    dropdown.classList.remove('is-open');
+    if (dropdownToggle) dropdownToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (dropdownToggle) {
+    dropdownToggle.setAttribute('aria-expanded', 'false');
+    dropdownToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      if (dropdown.classList.contains('is-open')) {
+        closeDropdown();
+      } else {
+        openDropdown();
+      }
+    });
+  }
+
+  // Close dropdown when clicking outside it
+  document.addEventListener('click', function (e) {
+    if (dropdown && !dropdown.contains(e.target)) {
+      closeDropdown();
+    }
+  });
+
+  // Close dropdown when a link inside it is clicked on mobile
+  if (dropdownMenu) {
+    dropdownMenu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && window.innerWidth < BREAKPOINT) {
+        closeDropdown();
+      }
+    });
+  }
+
+  /* ── Mobile hamburger menu ── */
   function openMenu() {
     nav.setAttribute('aria-hidden', 'false');
     nav.style.cssText =
@@ -23,6 +67,7 @@
     toggle.setAttribute('aria-expanded', 'false');
     toggle.classList.remove('is-open');
     document.body.style.overflow = '';
+    closeDropdown();
   }
 
   toggle.setAttribute('aria-expanded', 'false');
@@ -35,7 +80,7 @@
     }
   });
 
-  // Close when clicking outside the header
+  // Close menu when clicking outside the header
   document.addEventListener('click', function (e) {
     if (
       toggle.getAttribute('aria-expanded') === 'true' &&
@@ -46,9 +91,13 @@
     }
   });
 
-  // Close when a nav link is tapped on mobile
+  // Close when a non-dropdown nav link is tapped on mobile
   nav.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A' && window.innerWidth < BREAKPOINT) {
+    if (
+      e.target.tagName === 'A' &&
+      window.innerWidth < BREAKPOINT &&
+      !dropdownMenu.contains(e.target)
+    ) {
       closeMenu();
     }
   });
@@ -61,6 +110,7 @@
       toggle.setAttribute('aria-expanded', 'false');
       toggle.classList.remove('is-open');
       document.body.style.overflow = '';
+      closeDropdown();
     } else if (toggle.getAttribute('aria-expanded') !== 'true') {
       nav.setAttribute('aria-hidden', 'true');
       nav.style.display = 'none';
@@ -80,6 +130,10 @@
     if (!hrefFile) hrefFile = 'index.html';
     if (hrefFile === currentFile) {
       link.classList.add('active');
+      // Also mark the dropdown toggle as active if a child link is active
+      if (dropdownMenu && dropdownMenu.contains(link) && dropdownToggle) {
+        dropdownToggle.classList.add('active');
+      }
     }
   });
 })();
