@@ -479,13 +479,13 @@ body {
 
 .btn-primary {
   background: var(--brand-orange);
-  color: var(--brand-white);
+  color: var(--brand-white) !important;
   box-shadow: 0 2px 12px rgba(222, 117, 36, 0.35);
 }
 
 .btn-primary:hover {
   background: #c9661f;
-  color: var(--brand-white);
+  color: var(--brand-white) !important;
   transform: translateY(-1px);
 }
 
