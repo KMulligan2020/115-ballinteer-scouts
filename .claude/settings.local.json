@@ -50,7 +50,10 @@
       "Bash(mv IMG-5070.JPG IMG-5070.jpg)",
       "Bash(mv IMG-5083.JPG IMG-5083.jpg)",
       "Bash(git mv:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(sips -s format jpeg \"/Users/karen/Downloads/IMG_0442.HEIC\" --out \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/den-interior-1.jpg\")",
+      "Bash(sips -s format jpeg \"/Users/karen/Downloads/IMG_1766 2.HEIC\" --out \"/Users/karen/Project/Website/115BallinteerWebsite/Website/assets/den-interior-2.jpg\")",
+      "Bash(sips:*)"
     ]
   }
 }
