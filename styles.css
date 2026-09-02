@@ -1148,6 +1148,128 @@ body {
   background: var(--brand-teal);
 }
 
+/* What to bring / kit lists */
+.kit-lead {
+  margin-bottom: 1.25rem;
+}
+
+.kit-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kit-jump a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--green-50);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--brand-dark-green);
+}
+
+.kit-jump a:hover {
+  background: var(--green-200);
+}
+
+.kit-group {
+  margin: 1.25rem 0;
+}
+
+.kit-group h3 {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  margin: 0 0 0.6rem;
+  color: var(--brand-dark-green);
+}
+
+.kit-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.kit-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+  break-inside: avoid;
+}
+
+.kit-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--green-200);
+  border-radius: 3px;
+}
+
+.kit-note {
+  margin: 1.25rem 0;
+  padding: 0.85rem 1rem;
+  background: rgba(253, 183, 38, 0.15);
+  border-left: 4px solid var(--brand-yellow);
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+}
+
+.kit-note strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 560px) {
+  .kit-list {
+    columns: 1;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .breadcrumb,
+  .btn,
+  .kit-jump,
+  #CybotCookiebotDialog,
+  #CybotCookiebotDialogBodyUnderlay {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+  }
+  .subpage-hero {
+    padding: 0 0 0.5rem;
+  }
+  .section {
+    padding: 0.4rem 0;
+  }
+  .kit-list {
+    columns: 2;
+  }
+  .kit-list li::before {
+    border-color: #000;
+  }
+  .kit-note {
+    border-color: #000;
+    background: #f2f2f2;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
 /* Contact */
 .contact-map {
   margin: 0.5rem 0 1.75rem;
